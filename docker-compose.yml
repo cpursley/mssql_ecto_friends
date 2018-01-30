@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    depends_on:
+      - postgres_db
+    links:
+      - postgres_db
+  postgres_db:
+    image: postgres:alpine
