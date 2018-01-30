@@ -2,15 +2,28 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :friends, Friends.Repo,
-  adapter:   Ecto.Adapters.Postgres,
-  database:  "friends_repo",
-  username:  "postgres",
-  password:  "",
-  hostname:  "postgres_db",
-  pool_size: 10
+# Postgres
+# config :friends, Friends.Repo,
+#   adapter:   Ecto.Adapters.Postgres,
+#   database:  "friends_repo",
+#   username:  "postgres",
+#   password:  "",
+#   hostname:  "postgres_db",
+#   pool_size: 10
 
+# MS SQL
 config :friends, ecto_repos: [Friends.Repo]
+
+config :friends, Friends.Repo,
+  adapter:       MssqlEcto,
+  database:      "friends_repo",
+  username:      "sa",
+  password:      "reallyStrongPwd123",
+  hostname:      "mssql_db",
+  instance_name: "MSSQLSERVER",
+  port:          "1433",
+  pool_size:     10,
+  odbc_driver:   "{ODBC Driver 13.1 for SQL Server}"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
