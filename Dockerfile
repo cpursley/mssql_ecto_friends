@@ -12,6 +12,10 @@ RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     /usr/sbin/update-locale LANG=en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
+# --- Erlang ODBC ---
+
+RUN apt-get install erlang-odbc -y
+
 # --- MSSQL ODBC INSTALL ---
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-transport-https
@@ -30,3 +34,7 @@ RUN mix local.hex --force && \
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN mix do deps.get
+
+# --- Be able to run wait for it script (for MS SQL) ---
+
+RUN chmod +x /usr/src/app/wait-for-it.sh

@@ -12,7 +12,7 @@ defmodule Friends.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :ecto, :postgrex],
+    [applications: [:logger, :ecto, :postgrex, :mssqlex, :mssql_ecto],
      mod: {Friends, []}]
   end
 
@@ -23,7 +23,9 @@ defmodule Friends.Mixfile do
   defp deps do
     [
       {:postgrex, ">= 0.0.0"},
-      {:ecto, "~> 2.1.0"}
+      {:ecto, "~> 2.1.0"},
+      {:mssql_ecto, "~> 0.3.1"},
+      {:mssqlex, "~> 0.8.0"}
     ]
   end
 end
