@@ -18,15 +18,12 @@ $ docker-compose up
 In separate terminal:
 
 ```bash
-$ docker-compose mix ecto.create
-$ docker-compose mix ecto.migrate
+$ docker-compose mix setup
 ```
 
 Interact with iex:
 
 ```bash
 $ iex -S mix
-iex> Friends.Repo.insert! %Friends.Person{first_name: "José", last_name: "Valim", age: 31}
-iex> Friends.Repo.insert! %Friends.Person{first_name: "Chase", last_name: "Pursley", age: 33}
 iex> Friends.Repo.all Friends.Person
 ```
