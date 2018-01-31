@@ -1,12 +1,14 @@
 # Friends
 
-A sample application built for Ecto guides.
+A sample application demonstrating [MssqlEcto](https://github.com/findmypast-oss/mssql_ecto) (Microsoft SQL Server + Elixir's Ecto)
 
 Based on: https://github.com/elixir-ecto/ecto/tree/master/examples/friends
 
-### Get started
+## Installation
 
-Build Docker:
+Install Docker Compose: https://docs.docker.com/compose/install
+
+Build containers, Elixir and MS SQL:
 
 ```bash
 $ docker-compose build
