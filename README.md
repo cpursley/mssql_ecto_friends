@@ -26,9 +26,7 @@ Interact with iex:
 
 ```bash
 $ iex -S mix
-iex> josé = %Friends.Person{first_name: "José", last_name: "Valim", age: 31}
-iex> josé |> Friends.Repo.insert
-iex> chris = %Friends.Person{first_name: "Chris", last_name: "McCord", age: 34}
-iex> chris |> Friends.Repo.insert
+iex> Friends.Repo.insert! %Friends.Person{first_name: "José", last_name: "Valim", age: 31}
+iex> Friends.Repo.insert! %Friends.Person{first_name: "Chase", last_name: "Pursley", age: 33}
 iex> Friends.Repo.all Friends.Person
 ```

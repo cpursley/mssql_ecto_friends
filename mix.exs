@@ -24,8 +24,8 @@ defmodule Friends.Mixfile do
     [
       {:postgrex, ">= 0.0.0"},
       {:ecto, "~> 2.1.0"},
-      {:mssql_ecto, "~> 0.3.1"},
-      {:mssqlex, "~> 0.8.0"}
+      {:mssql_ecto, "~> 1.0.0"},
+      {:mssqlex, "~> 1.0.0"}
     ]
   end
 end
