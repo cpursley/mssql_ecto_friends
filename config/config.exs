@@ -23,7 +23,7 @@ config :friends, Friends.Repo,
   instance_name: "MSSQLSERVER",
   port:          "1433",
   pool_size:     10,
-  odbc_driver:   "{ODBC Driver 17 for SQL Server}"
+  odbc_driver:   "{ODBC Driver 13 for SQL Server}"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
