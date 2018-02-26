@@ -2,15 +2,6 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-# Postgres
-# config :friends, Friends.Repo,
-#   adapter:   Ecto.Adapters.Postgres,
-#   database:  "friends_repo",
-#   username:  "postgres",
-#   password:  "",
-#   hostname:  "postgres_db",
-#   pool_size: 10
-
 # MS SQL
 config :friends, ecto_repos: [Friends.Repo]
 

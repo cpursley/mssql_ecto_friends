@@ -3,14 +3,10 @@ services:
   web:
     build: .
     depends_on:
-      # - postgres_db
-      - mssql_db
+      - db
     links:
-      # - postgres_db
-      - mssql_db
-  # postgres_db:
-  #   image: postgres:alpine
-  mssql_db:
+      - db
+  db:
     image: microsoft/mssql-server-linux
     environment:
       - ACCEPT_EULA=Y
